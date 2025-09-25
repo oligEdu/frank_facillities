@@ -1,22 +1,21 @@
-
+import { Home } from "lucide-react";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./components/home/Home"
-import { BrowserRouter } from "react-router-dom";
+import Contato from "./pages/contato/Contato";
+import Servicos from "./pages/services/Servicos";
+import Sobre from "./pages/sobre/Sobre";
 import Footer from "./components/footer/Footer";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <main className="pt-20">
-        <Home />
-{/*         <Sobre />
-        <Servico /> */}
-        </main>
-      </BrowserRouter>
+    <div className="min-h-screen">
+      <Navbar />
+      <Home />
+      <Servicos />
+      <Sobre />
+      <Contato />
       <Footer />
-    </>
+    </div>
   );
-}
+};
+
 export default App;
