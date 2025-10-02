@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 // Navbar Component
-const Navbar = () => {
+function Navbar () {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -14,40 +14,38 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white flex items-center justify-center drop-shadow-sm py-1.5 px-6 fixed w-full z-1000">
+      <div className="container flex items-center justify-between w-full">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
             <div className="text-2xl font-bold text-blue-600">
               MARYUGO
             </div>
-          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <button
                 onClick={() => scrollToSection('home')}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection('servicos')}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer"
               >
                 Serviços
               </button>
               <button
                 onClick={() => scrollToSection('sobre')}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer"
               >
                 Sobre
               </button>
               <button
                 onClick={() => scrollToSection('contato')}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors cursor-pointer"
               >
                 Contato
               </button>

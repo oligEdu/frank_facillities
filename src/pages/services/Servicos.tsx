@@ -1,5 +1,5 @@
 // Servicos Component
-const Servicos = () => {
+function Servicos() {
   const servicos = [
     {
       title: 'Manutenção Elétrica',

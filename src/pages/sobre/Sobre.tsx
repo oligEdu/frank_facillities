@@ -1,7 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 
 // Sobre Component
-const Sobre = () => {
+function Sobre () {
   return (
     <section id="sobre" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 // Contato Component
-const Contato = () => {
+function Contato () {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
